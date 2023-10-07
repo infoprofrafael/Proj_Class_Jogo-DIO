@@ -26,26 +26,24 @@ let vegeta = new PersonagemAnime("Vegeta", 770, "FINAL FLASH", 3240);
 
 // Combate até um dos personagens ser derrotado
 while (goku.vivo && vegeta.vivo) {
-  // if (goku.vivo) {
-    goku.atacar(vegeta);
-    if (vegeta.life > 0) {
-      console.log(` == ${vegeta.nome}: ${vegeta.life} de vida == `);
-      console.log(' ');
 
-    } else {
-      console.log(`${goku.nome} venceu!`);
-      break;
+  goku.atacar(vegeta);
+  if (vegeta.life > 0) {
+    console.log(` == ${vegeta.nome}: ${vegeta.life} de vida == `);
+    console.log(' ');
 
-    }
-  // }else if(vegeta.vivo){
+  } else {
+    console.log(`${goku.nome} venceu!`);
+    break;
 
-    vegeta.atacar(goku);
-    if (goku.life > 0) {
-      console.log(` == ${goku.nome}: ${goku.life} de vida == `);
-      console.log(' ');      
-    } else {
-      console.log(`${vegeta.nome} venceu!`);
-      break;
-    }
   }
-// }
+  vegeta.atacar(goku);
+  if (goku.life > 0) {
+    console.log(` == ${goku.nome}: ${goku.life} de vida == `);
+    console.log(' ');
+  } else {
+    console.log(`${vegeta.nome} venceu!`);
+    break;
+  }
+}
+
